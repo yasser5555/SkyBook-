@@ -1,0 +1,75 @@
+.min-vh-100-custom {
+    min-height: calc(100vh - 76px); /* approximate subtract navbar height */
+}
+
+.register-card {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04) !important;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.input-group-custom i {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.input-group-custom .form-control {
+    padding-left: 42px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.input-group-custom .form-control:focus {
+    background-color: #fff;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(0, 102, 255, 0.15);
+}
+
+/* Update invalid feedback positioning due to absolute icon */
+.input-group-custom .invalid-feedback {
+    margin-top: 0.25rem;
+}
+
+.btn-create-account {
+    background-color: var(--primary-color);
+    border: none;
+    transition: all 0.2s ease-in-out;
+    padding: 12px 0;
+}
+
+.btn-create-account:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.2);
+}
+
+.btn-social {
+    border-color: #dee2e6;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.95rem;
+}
+
+.btn-social:hover {
+    background-color: #f8f9fa;
+    color: var(--text-dark);
+    border-color: #ccc;
+}
+
+/* Nav links styling */
+.navbar-nav .nav-link {
+    color: var(--text-dark);
+    transition: color 0.2s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+}

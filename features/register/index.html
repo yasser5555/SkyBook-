@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - SkyBook</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../shared/css/global.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-airplane-engines-fill text-primary fs-3"></i>
+                <span class="fw-bold fs-4" style="color: #333;">SkyBook</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3 fw-medium">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Flights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">My Bookings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-5 d-flex justify-content-center align-items-center min-vh-100-custom">
+        <div class="register-card bg-white p-4 p-md-5 rounded-4 shadow-sm w-100" style="max-width: 500px;">
+
+            <div class="text-center mb-4">
+                <div class="icon-circle bg-primary bg-opacity-10 text-primary mx-auto mb-3 d-flex justify-content-center align-items-center rounded-circle"
+                    style="width: 60px; height: 60px;">
+                    <i class="bi bi-person-plus-fill fs-3"></i>
+                </div>
+                <h2 class="fw-bold mb-2">Create Your Account</h2>
+                <p class="text-muted">Join SkyBook and start your journey today.</p>
+            </div>
+
+            <form id="registerForm" novalidate>
+                <!-- Full Name -->
+                <div class="mb-3 position-relative input-group-custom">
+                    <i class="bi bi-person position-absolute text-muted"></i>
+                    <input type="text" class="form-control" id="fullName" placeholder="John Doe" required>
+                    <div class="invalid-feedback">Please enter your full name.</div>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3 position-relative input-group-custom">
+                    <i class="bi bi-envelope position-absolute text-muted"></i>
+                    <input type="email" class="form-control" id="email" placeholder="john@example.com" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+
+                <!-- Passwords -->
+                <div class="row gx-2 mb-3">
+                    <div class="col-sm-6 mb-3 mb-sm-0 position-relative input-group-custom">
+                        <i class="bi bi-lock position-absolute text-muted"></i>
+                        <input type="password" class="form-control" id="password" placeholder="Password" required
+                            minlength="8">
+                        <div class="invalid-feedback">Min 8 characters.</div>
+                    </div>
+                    <div class="col-sm-6 position-relative input-group-custom">
+                        <i class="bi bi-lock position-absolute text-muted"></i>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password"
+                            required>
+                        <div class="invalid-feedback">Passwords do not match.</div>
+                    </div>
+                </div>
+
+                <!-- Terms -->
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" id="terms" required>
+                    <label class="form-check-label text-muted" style="font-size: 0.9rem;" for="terms">
+                        I agree to the <a href="#" class="text-primary text-decoration-none fw-medium">Terms of
+                            Service</a> and <a href="#" class="text-primary text-decoration-none fw-medium">Privacy
+                            Policy</a>
+                    </label>
+                    <div class="invalid-feedback">You must agree before submitting.</div>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold rounded-3 mb-3 btn-create-account">
+                    Create Account
+                </button>
+            </form>
+
+            <div class="text-center mb-4">
+                <span class="text-muted" style="font-size: 0.9rem;">Already have an account? <a href="#"
+                        class="text-primary fw-semibold text-decoration-none">Login</a></span>
+            </div>
+
+            <!-- Social Registration -->
+            <div class="position-relative text-center mb-4">
+                <hr class="text-muted">
+                <span class="position-absolute top-50 start-50 translate-middle bg-white px-3 text-muted"
+                    style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px;">OR REGISTER WITH</span>
+            </div>
+
+            <div class="d-flex gap-3">
+                <button type="button"
+                    class="btn btn-outline-secondary w-50 py-2 d-flex justify-content-center align-items-center gap-2 btn-social rounded-3">
+                    <i class="bi bi-google text-danger"></i> <span class="d-none d-sm-inline">Google</span>
+                </button>
+                <button type="button"
+                    class="btn btn-outline-secondary w-50 py-2 d-flex justify-content-center align-items-center gap-2 btn-social rounded-3">
+                    <i class="bi bi-apple text-dark"></i> <span class="d-none d-sm-inline">Apple</span>
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Logic -->
+    <script src="register.js"></script>
+</body>
+
+</html>
